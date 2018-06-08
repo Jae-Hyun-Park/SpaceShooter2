@@ -75,9 +75,6 @@ public class PlayerCtrl : MonoBehaviour {
 		vertical = Input.GetAxis("Vertical");
 		deltaAngle = Input.GetAxis("Mouse X");
 
-		Debug.Log("H : " + horizontal);
-		Debug.Log("V : " + vertical);
-
 		// 이동 벡터를 vertical + horizontal로 구함
 		movement =
 			(Vector3.forward * vertical) + (Vector3.right * horizontal);
