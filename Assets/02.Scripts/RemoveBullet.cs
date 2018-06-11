@@ -6,6 +6,10 @@ public class RemoveBullet : MonoBehaviour {
 
     // 스파크 프리팹 인스턴스를 저장할 변수
     public GameObject sparkEffect;
+
+    // 스파크 이펙트의가 이 오브젝트의 자식으로 붙일것인지 체크하는 변수
+    public bool isSparkEffectRelative;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "BULLET")
@@ -24,6 +28,9 @@ public class RemoveBullet : MonoBehaviour {
         Quaternion rotation = Quaternion.FromToRotation(Vector3.back, contact.normal);
 
         // 스파크 효과를 생성
-        Instantiate(sparkEffect, contact.point, rotation);
+        Instantiate(sparkEffect,
+            contact.point,
+            rotation,
+            isSparkEffectRelative ? transform : null);
     }
 }

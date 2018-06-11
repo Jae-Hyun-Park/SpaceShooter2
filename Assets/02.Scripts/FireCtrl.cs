@@ -35,7 +35,7 @@ public class FireCtrl : MonoBehaviour {
     void Fire()
     {
         // Bullet 프리팹을 복사해 인스턴스화
-        GameObject bullet = Instantiate(bulletPrefab, firePos.position, transform.rotation);
+        Instantiate(bulletPrefab, firePos.position, transform.rotation);
         catrige.Play();
         muzzleFlash.Play();
     }
