@@ -51,7 +51,7 @@ public class MoveAgent : MonoBehaviour {
         {
             _traceTarget = value;
             agent.speed = traceSpeed;
-            damping = 7.0f;
+            damping = 10.0f;
             TraceTarget(_traceTarget);
         }
     }
