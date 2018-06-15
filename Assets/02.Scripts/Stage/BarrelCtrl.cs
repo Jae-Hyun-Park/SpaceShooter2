@@ -69,7 +69,7 @@ public class BarrelCtrl : MonoBehaviour {
     
     public void StartExpBarrel(Vector3 pos, float delay)
     {
-        StartCoroutine(ExpBarrel(transform.position, delay));
+        StartCoroutine(ExpBarrel(pos, delay));
     }
     IEnumerator ExpBarrel(Vector3 pos, float delayTime)
     {
