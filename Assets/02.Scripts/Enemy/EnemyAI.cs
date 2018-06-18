@@ -40,6 +40,8 @@ public class EnemyAI : MonoBehaviour {
     // Animator 컴포넌트 변수
     private Animator animator;
 
+    private EnemyFire enemyFire;
+
     // 애니메이터 컨트롤러에 정의한 파라미터의 해시값을 미리 추출
     private readonly int hashMove = Animator.StringToHash("IsMove");
     private readonly int hashSpeed = Animator.StringToHash("Speed");
@@ -54,6 +56,7 @@ public class EnemyAI : MonoBehaviour {
 
         moveAgent = GetComponent<MoveAgent>();
         animator = GetComponent<Animator>();
+        enemyFire = GetComponent<EnemyFire>();
 
         waitSecond = new WaitForSeconds(refreshAICycle);
     }
@@ -105,19 +108,23 @@ public class EnemyAI : MonoBehaviour {
             {
                 case EnemyState.PATROL:
                     // 순찰 모드 활성화
+                    enemyFire.isFire = false;
                     moveAgent.patrolling = true;
                     animator.SetBool(hashMove, true);
                     break;
                 case EnemyState.TRACE:
                     // 주인공의 위치를 넘겨 추적모드로 변경
+                    enemyFire.isFire = false;
                     moveAgent.traceTarget = playerTransform.position;
                     animator.SetBool(hashMove, true);
                     break;
                 case EnemyState.ATTACK:
+                    if (enemyFire.isFire == false) {  enemyFire.isFire = true; }
                     moveAgent.Stop();
                     animator.SetBool(hashMove, false);
                     break;
                 case EnemyState.DIE:
+                    enemyFire.isFire = false;
                     moveAgent.Stop();
                     break;
             }
