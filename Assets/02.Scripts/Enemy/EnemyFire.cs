@@ -46,12 +46,17 @@ public class EnemyFire : MonoBehaviour {
     // 총알 발사 사운드 클립
     public AudioClip FireSFX;
 
+    public MeshRenderer muzzleFlash;
+
 	// Use this for initialization
 	void Start () {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         wsReload = new WaitForSeconds(reloadTime);
+
+        // mezzleFlash 비활성화
+        muzzleFlash.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -76,6 +81,8 @@ public class EnemyFire : MonoBehaviour {
         animator.SetTrigger(hashFire);
         audioSource.PlayOneShot(FireSFX);
 
+        StartCoroutine(ShowMuzzleFlash());
+
         // 총알 생성
         GameObject _bullet = Instantiate(bullet, firePos.position, transform.rotation);
 
@@ -89,6 +96,31 @@ public class EnemyFire : MonoBehaviour {
         {
             StartCoroutine(Reloading());
         }
+    }
+    
+    IEnumerator ShowMuzzleFlash()
+    {
+        // 총구 이펙트 활성화
+        muzzleFlash.enabled = true;
+
+        // 불규칙한 회전 각도 계산 -> Z축 회전 값
+        Quaternion rotation = Quaternion.Euler(Vector3.forward * Random.Range(0, 360));
+
+        // muzzleFlash 회전(LocalRotation)을 계산 값으로 적용
+        muzzleFlash.transform.localRotation = rotation;
+
+        // muzzleFlash의 스케일도 불규칙하게 조정
+        muzzleFlash.transform.localScale = Vector3.one * Random.Range(1.0f, 2.0f);
+
+        // 텍스쳐 offset 속성에 랜덤한 값을 적용
+        Vector2 offset = new Vector2(Random.Range(0, 2), Random.Range(0, 2)) * 0.5f;
+
+        muzzleFlash.material.SetTextureOffset("_MainTex", offset);
+
+        // 총구 이펙트를 보여준 채로 잠시 대기
+        yield return new WaitForSeconds(Random.Range(0.05f, 0.2f));
+
+        muzzleFlash.enabled = false;
     }
 
     IEnumerator Reloading()
