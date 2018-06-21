@@ -34,6 +34,8 @@ public class BarrelCtrl : MonoBehaviour {
     // MeshRenderer 컴포넌트 인스턴스
     MeshRenderer meshRenderer;
 
+    Shaker shaker;
+
 	// Use this for initialization
 	void Start () {
 
@@ -50,6 +52,8 @@ public class BarrelCtrl : MonoBehaviour {
         meshRenderer.material.mainTexture = textures[Random.Range(0, textures.Length)];
 
 		audioSource = GetComponent<AudioSource>();
+
+        shaker = GameObject.Find("CameraRig").GetComponent<Shaker>();
     }
 
     // 충돌 발생시 한번 호출되는 콜백 함수
@@ -77,6 +81,8 @@ public class BarrelCtrl : MonoBehaviour {
             yield break;
 
         yield return new WaitForSeconds(delayTime);
+
+        shaker.StartCoroutine(shaker.ShakeCamera(0.1f, 0.2f, 0.5f));
 
 		audioSource.PlayOneShot(expSfx, 1.0f);
         ChangeAfterExp();

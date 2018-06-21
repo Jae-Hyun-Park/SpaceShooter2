@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4439967812511406}
   - component: {fileID: 33185845154559150}
   - component: {fileID: 23490093514937328}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: lowpolybullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 136038243841870924}
   - component: {fileID: 114615714938513578}
   - component: {fileID: 96243401467302078}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Bullet
   m_TagString: BULLET
   m_Icon: {fileID: 0}

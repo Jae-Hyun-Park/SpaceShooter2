@@ -127,15 +127,18 @@ public class EnemyFire : MonoBehaviour {
     {
         // 재장전 애니메이션 실행
         animator.SetTrigger(hashReload);
-
-        // 재장던 사운드 재생
-        audioSource.PlayOneShot(reloadSFX, 1.0f);
-
+        
         // 재장전 시간만큼 대기하는 동안 제어권 양보
         yield return wsReload;
 
         // 총알 갯수 초기화
         currentBullet = maxBullet;
         isReload = false;
+    }
+
+    public void PlayReloadSFX()
+    {
+        // 재장던 사운드 재생
+        audioSource.PlayOneShot(reloadSFX, 1.0f);
     }
 }

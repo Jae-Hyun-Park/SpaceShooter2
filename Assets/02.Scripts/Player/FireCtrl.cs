@@ -37,10 +37,12 @@ public class FireCtrl : MonoBehaviour {
 
 	AudioSource audioSource;
 
+    Shaker shaker;
 	// Use this for initialization
 	void Start () {
         muzzleFlash = firePos.GetComponentInChildren<ParticleSystem>();
 		audioSource = GetComponent<AudioSource>();
+        shaker = GameObject.Find("CameraRig").GetComponent<Shaker>();
     }
 	
 	// Update is called once per frame
@@ -56,6 +58,8 @@ public class FireCtrl : MonoBehaviour {
     // 총알 발사 함수
     void Fire()
     {
+        // 카메라 Shaker 효과 발동
+        shaker.StartCoroutine(shaker.ShakeCamera());
         // Bullet 프리팹을 복사해 인스턴스화
         Instantiate(bulletPrefab, firePos.position, transform.rotation);
         catrige.Play();

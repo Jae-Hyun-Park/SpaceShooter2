@@ -1,3 +1,8 @@
-﻿{
-	"name": "PlayerAD"
+{
+    "name": "PlayerAD",
+    "references": [
+        "CommonAD"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
 }
