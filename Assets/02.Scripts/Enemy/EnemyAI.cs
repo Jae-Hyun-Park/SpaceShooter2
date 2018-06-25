@@ -47,6 +47,9 @@ public class EnemyAI : MonoBehaviour {
     private readonly int hashSpeed = Animator.StringToHash("Speed");
     private readonly int hashDie = Animator.StringToHash("Die");
     private readonly int hashDieIndex = Animator.StringToHash("DieIdx");
+    private readonly int hashOffset = Animator.StringToHash("Offset");
+    private readonly int hashWalkSpeed = Animator.StringToHash("WalkSpeed");
+    private readonly int hashPlayerDie = Animator.StringToHash("PlayerDie");
 
     private void Awake()
     {
@@ -66,11 +69,23 @@ public class EnemyAI : MonoBehaviour {
     // 활성화 되는 순간 호출
     private void OnEnable()
     {
+        // CycleOffset 랜덤 설정
+        animator.SetFloat(hashOffset, Random.Range(0.0f, 1.0f));
+
+        // WalkSpeed 값을 랜덤 설정
+        animator.SetFloat(hashWalkSpeed, Random.Range(1.0f, 1.2f));
         // CheckState (코루틴) 호출
         StartCoroutine(CheckState());
 
         // Action 코루틴 호출
         StartCoroutine(Action());
+
+        Damage.onPlayerDie += OnPlayerDie;
+    }
+
+    private void OnDisable()
+    {
+        Damage.onPlayerDie -= OnPlayerDie;
     }
 
     IEnumerator CheckState()
@@ -144,10 +159,20 @@ public class EnemyAI : MonoBehaviour {
     void Start () {
 		
 	}
-	
 	// Update is called once per frame
 	void Update () {
         // Speed 파라미터에 이동속도를 전달
         animator.SetFloat(hashSpeed, moveAgent.speed);
 	}
+    
+    public void OnPlayerDie()
+    {
+        moveAgent.Stop();
+        enemyFire.isFire = false;
+
+        // 모든 코루틴 함수 종료
+        StopAllCoroutines();
+
+        animator.SetTrigger(hashPlayerDie);
+    }
 }

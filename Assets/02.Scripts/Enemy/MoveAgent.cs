@@ -76,7 +76,7 @@ public class MoveAgent : MonoBehaviour {
         agent.speed = patrolSpeed;
 
         var group = GameObject.Find("WayPointGroup");
-        
+
         if (group != null)
         {
             // WayPointGroup 하위에 있는 모든 Transform 컴포넌트를
@@ -89,6 +89,14 @@ public class MoveAgent : MonoBehaviour {
             //{
             //    wayPoints.Add(child);
             //}
+
+            for (int i = 0; i < wayPoints.Count; ++i)
+            {
+                Transform temp = wayPoints[i];
+                int randomIndex = Random.Range(i, wayPoints.Count);
+                wayPoints[i] = wayPoints[randomIndex];
+                wayPoints[randomIndex] = temp;
+            }
         }
 
         //MoveWayPoint();
