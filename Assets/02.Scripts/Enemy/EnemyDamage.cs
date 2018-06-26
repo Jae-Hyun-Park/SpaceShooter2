@@ -11,7 +11,6 @@ public class EnemyDamage : MonoBehaviour {
 
     // 피격시 사용 할 혈흔 이펙트
     private GameObject bloodEffect;
-
     // Use this for initialization
 	void Start () {
         // 혈흔 효과 프리팹을 리소스 폴더에서 로드
