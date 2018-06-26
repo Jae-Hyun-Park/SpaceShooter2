@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class PlayerSFX
@@ -38,6 +39,23 @@ public class FireCtrl : MonoBehaviour {
 	AudioSource audioSource;
 
     Shaker shaker;
+
+    // 탄창 ImageUI
+    public Image magazineImg;
+
+    // 남은 총알 TextUI
+    public Text magazineText;
+
+    // 최대 총알수
+    public int maxBullet = 10;
+
+    // 남은 총알수
+    public int remainBullet = 10;
+
+    public float reloadTime = 2.0f;
+
+    public bool isReloading = false;
+
 	// Use this for initialization
 	void Start () {
         muzzleFlash = firePos.GetComponentInChildren<ParticleSystem>();
@@ -48,13 +66,43 @@ public class FireCtrl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Input.GetMouseButtonDown(0))
+        if (!isReloading && Input.GetMouseButtonDown(0))
         {
+            --remainBullet;
+
+            UpdateBullet();
             // 총알 발사 함수 호출
             Fire();
+
+            if (remainBullet == 0)
+            {
+                StartCoroutine(Reloading());
+            }
         }
 	}
 
+    IEnumerator Reloading()
+    {
+        isReloading = true;
+        yield return new WaitForSeconds(0.2f);
+
+        audioSource.PlayOneShot(playerSFX.reloadClips[(int)currentWeapon], 1.0f);
+
+        yield return new WaitForSeconds(playerSFX.reloadClips[(int)currentWeapon].length + 0.1f);
+
+        isReloading = false;
+        magazineImg.fillAmount = 1.0f;
+        remainBullet = maxBullet;
+
+        UpdateBullet();
+    }
+
+    void UpdateBullet()
+    {
+        magazineImg.fillAmount = remainBullet / (float)maxBullet;
+
+        magazineText.text = string.Format("<color=#ff0000>{0}</color>/{1}", remainBullet, maxBullet);
+    }
     // 총알 발사 함수
     void Fire()
     {
