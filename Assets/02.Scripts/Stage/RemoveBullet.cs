@@ -15,7 +15,8 @@ public class RemoveBullet : MonoBehaviour {
         if(collision.collider.tag == "BULLET")
         {
             ShowEffect(collision);
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
     

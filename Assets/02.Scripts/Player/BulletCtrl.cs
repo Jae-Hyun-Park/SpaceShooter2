@@ -10,13 +10,30 @@ public class BulletCtrl : MonoBehaviour {
     // 총알의 속도
     public float speed = 1000.0f;
 
-	// Use this for initialization
-	void Start () {
+    Rigidbody rb;
+    Transform tr;
+    TrailRenderer trail;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        tr = GetComponent<Transform>();
+        trail = GetComponent<TrailRenderer>();
+    }
+    // Use this for initialization
+    void OnEnable () {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnDisable()
+    {
+        trail.Clear();
+        tr.position = Vector3.zero;
+        tr.rotation = Quaternion.identity;
+        rb.Sleep();
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

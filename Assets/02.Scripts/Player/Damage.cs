@@ -95,7 +95,7 @@ public class Damage : MonoBehaviour {
     void PlayerDie()
     {
         Debug.Log("Player has Dead..");
-
+        GameManager.instance.isGameOver = true;
         onPlayerDie();
         //GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 

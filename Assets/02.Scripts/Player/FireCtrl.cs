@@ -109,7 +109,15 @@ public class FireCtrl : MonoBehaviour {
         // 카메라 Shaker 효과 발동
         shaker.StartCoroutine(shaker.ShakeCamera());
         // Bullet 프리팹을 복사해 인스턴스화
-        Instantiate(bulletPrefab, firePos.position, transform.rotation);
+
+        var bullet = GameManager.instance.GetBullet();
+        if(bullet != null)
+        {
+            bullet.transform.position = firePos.position;
+            bullet.transform.rotation = firePos.rotation;
+            bullet.SetActive(true);
+        }
+
         catrige.Play();
 		muzzleFlash.Play();
 		FireSFX();
