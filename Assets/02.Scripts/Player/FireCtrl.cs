@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public class PlayerSFX
@@ -24,17 +25,8 @@ public class FireCtrl : MonoBehaviour {
     // 총알 프리팹
     public GameObject bulletPrefab;
 
-    // 총알 발사 좌표
-    public Transform firePos;
-
-    // 탄피 파티클
-    public ParticleSystem catrige;
-
 	// 각종 SFX 클립들을 로드할 클래스 변수
 	public PlayerSFX playerSFX;
-
-    // 총구 화염 파티클
-    private ParticleSystem muzzleFlash;
 
 	AudioSource audioSource;
 
@@ -56,16 +48,23 @@ public class FireCtrl : MonoBehaviour {
 
     public bool isReloading = false;
 
+    public Sprite[] weaponIcons;
+
+    public Image weaponChangeImage;
+
+    // 변경할 무기 Object 컴포넌트
+    public Weapon[] weapons;
+
 	// Use this for initialization
 	void Start () {
-        muzzleFlash = firePos.GetComponentInChildren<ParticleSystem>();
 		audioSource = GetComponent<AudioSource>();
         shaker = GameObject.Find("CameraRig").GetComponent<Shaker>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         if (!isReloading && Input.GetMouseButtonDown(0))
         {
             --remainBullet;
@@ -109,6 +108,8 @@ public class FireCtrl : MonoBehaviour {
         // 카메라 Shaker 효과 발동
         shaker.StartCoroutine(shaker.ShakeCamera());
         // Bullet 프리팹을 복사해 인스턴스화
+        Weapon cweapon = weapons[(int)currentWeapon];
+        Transform firePos = cweapon.firePos;
 
         var bullet = GameManager.instance.GetBullet();
         if(bullet != null)
@@ -118,11 +119,11 @@ public class FireCtrl : MonoBehaviour {
             bullet.SetActive(true);
         }
 
-        catrige.Play();
-		muzzleFlash.Play();
+        cweapon.catrige.Play();
+        cweapon.muzzleFlash.Play();
 		FireSFX();
-
     }
+
 	void FireSFX()
 	{
 		// 현재 들고있는 무기 타입에 맞게 오디오 클립을 가져옴
@@ -130,4 +131,14 @@ public class FireCtrl : MonoBehaviour {
 		audioSource.pitch = 1.0f + Random.Range(-0.2f, 0.2f);
 		audioSource.PlayOneShot(audioSource.clip, 1.0f);
 	}
+
+    public void OnChangeWeapon()
+    {
+        weapons[(int)currentWeapon].gameObject.SetActive(false);
+        currentWeapon = (WeaponType)((int)++currentWeapon % 2);
+        weaponChangeImage.sprite = weaponIcons[(int)currentWeapon];
+        weapons[(int)currentWeapon].gameObject.SetActive(true);
+
+        audioSource.PlayOneShot(playerSFX.reloadClips[(int)currentWeapon], 1.0f);
+    }
 }
