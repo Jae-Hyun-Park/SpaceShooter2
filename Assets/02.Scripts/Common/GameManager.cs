@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour {
     public List<GameObject> bulletPool = new List<GameObject>();
     #endregion
 
+    private bool isPaused = false;
+
+    // 인벤토리의 CanvasGroup 컴포넌트 변수
+    public CanvasGroup inventoryCG;
+
     private void Awake()
     {
         if (instance != null)
@@ -75,6 +80,8 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        OnInventoryButtonClick(false);
+
         spawnPoints = GameObject.Find("EnemySpawnPointGroup").GetComponentsInChildren<Transform>();
         
         if(spawnPoints.Length > 0)
@@ -107,4 +114,30 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void OnPauseClick()
+    {
+        isPaused = !isPaused;
+
+        Time.timeScale = (isPaused) ? 0.0f : 1.0f;
+
+        var PlayerObject = GameObject.FindGameObjectWithTag("Player");
+
+        var components = PlayerObject.GetComponents<MonoBehaviour>();
+
+        foreach(var component in components)
+        {
+            component.enabled = !isPaused;
+        }
+
+        var canvasGroup = GameObject.Find("Panel - Weapon").GetComponent<CanvasGroup>();
+        canvasGroup.blocksRaycasts = !isPaused;
+    }
+
+    public void OnInventoryButtonClick(bool open)
+    {
+        inventoryCG.alpha = (open) ? 1.0f : 0.0f;
+        inventoryCG.interactable = open;
+        inventoryCG.blocksRaycasts = open;
+    }
 }
