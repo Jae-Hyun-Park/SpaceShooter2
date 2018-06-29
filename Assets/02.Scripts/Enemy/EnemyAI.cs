@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour {
     public float refreshAICycle = 0.3f;
 
     // 죽어있는 상태
-    bool isDie = false;
+    bool isDie;
 
     // 코루틴에서 사용할 지연 시간 변수
     private WaitForSeconds waitSecond;
@@ -114,6 +114,7 @@ public class EnemyAI : MonoBehaviour {
             yield return waitSecond;
         }
     }
+    
     // Use this for initialization
     IEnumerator Action()
     {
@@ -136,11 +137,12 @@ public class EnemyAI : MonoBehaviour {
                     animator.SetBool(hashMove, true);
                     break;
                 case EnemyState.ATTACK:
-                    if (enemyFire.isFire == false) {  enemyFire.isFire = true; }
+                    if (enemyFire.isFire == false) enemyFire.isFire = true; 
                     moveAgent.Stop();
                     animator.SetBool(hashMove, false);
                     break;
                 case EnemyState.DIE:
+                    gameObject.tag = "Untagged";
                     isDie = true;
                     enemyFire.isFire = false;
 
@@ -152,10 +154,13 @@ public class EnemyAI : MonoBehaviour {
 
                     // 사망 트리거 전달
                     animator.SetTrigger(hashDie);
+
+                    GameManager.instance.IncreaseKillCount();
                     break;
             }
         }
     }
+    
     void Start () {
 		
 	}

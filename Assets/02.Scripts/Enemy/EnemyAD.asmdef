@@ -1,7 +1,8 @@
 {
     "name": "EnemyAD",
     "references": [
-        "PlayerAD"
+        "PlayerAD",
+        "CommonAD"
     ],
     "includePlatforms": [],
     "excludePlatforms": []

@@ -14,7 +14,7 @@ public class MoveAgent : MonoBehaviour {
 
     // NavMeshAgent 컴포넌트 인스턴스
     private NavMeshAgent agent;
-
+    
     private readonly float patrolSpeed = 1.5f;
     private readonly float traceSpeed = 4.0f;
 

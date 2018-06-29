@@ -118,7 +118,7 @@ public class FireCtrl : MonoBehaviour {
             bullet.transform.rotation = firePos.rotation;
             bullet.SetActive(true);
         }
-
+        
         cweapon.catrige.Play();
         cweapon.muzzleFlash.Play();
 		FireSFX();

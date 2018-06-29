@@ -18,7 +18,7 @@ public class PlayerCtrl : MonoBehaviour {
 	private float vertical = 0.0f;
 	private float deltaAngle = 0.0f;
 
-	public float moveSpeed = 10.0f;
+	private float moveSpeed = 10.0f;
 	public float rotateSpeed = 100.0f;
 
 	// 인스펙터 뷰에 표시할 애니메이션 클래스 변수
@@ -64,6 +64,7 @@ public class PlayerCtrl : MonoBehaviour {
 		anim.clip = playerAnim.idle;
 		anim.Play();
 
+        moveSpeed = GameManager.instance.gameData.speed;
 	}
 
 	// Update is called once per frame

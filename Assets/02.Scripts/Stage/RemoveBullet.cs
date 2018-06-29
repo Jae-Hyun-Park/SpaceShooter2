@@ -19,7 +19,7 @@ public class RemoveBullet : MonoBehaviour {
             collision.gameObject.SetActive(false);
         }
     }
-    
+   
     void ShowEffect(Collision coll)
     {
         // 충돌 지점의 정보를 추출

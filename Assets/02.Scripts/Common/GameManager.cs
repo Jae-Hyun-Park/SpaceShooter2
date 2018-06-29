@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using DataInfo;
 public class GameManager : MonoBehaviour {
 
     #region 적 생성 관련 변수
@@ -34,6 +35,13 @@ public class GameManager : MonoBehaviour {
     // 인벤토리의 CanvasGroup 컴포넌트 변수
     public CanvasGroup inventoryCG;
 
+    //[HideInInspector] public int killCount;
+    #region GameData
+    public Text killCountText;
+    private DataManager dataManager;
+    public GameData gameData;
+    #endregion
+
     private void Awake()
     {
         if (instance != null)
@@ -45,6 +53,10 @@ public class GameManager : MonoBehaviour {
             instance = this;
             DontDestroyOnLoad(gameObject);
 
+            dataManager = GetComponent<DataManager>();
+            dataManager.Initialized();
+
+            LoadGameData();
             CreatePool();
         }
     }
@@ -83,7 +95,8 @@ public class GameManager : MonoBehaviour {
         OnInventoryButtonClick(false);
 
         spawnPoints = GameObject.Find("EnemySpawnPointGroup").GetComponentsInChildren<Transform>();
-        
+        LoadGameData();
+
         if(spawnPoints.Length > 0)
         {
             StartCoroutine(GenerateEnemy());
@@ -140,4 +153,38 @@ public class GameManager : MonoBehaviour {
         inventoryCG.interactable = open;
         inventoryCG.blocksRaycasts = open;
     }
+
+    #region 게임 데이터 저장 및 로드
+    void LoadGameData()
+    {
+        GameData data = dataManager.Load();
+
+        gameData.killCount = data.killCount;
+        gameData.hp = data.hp;
+        gameData.speed = data.speed;
+        gameData.damage = data.damage;
+        gameData.equipedItem = data.equipedItem;
+
+        //killCount = PlayerPrefs.GetInt("KILL_COUNT", 0);
+        killCountText.text = "KILL : " + gameData.killCount.ToString("0000");
+    }
+
+    public void IncreaseKillCount()
+    {
+        ++gameData.killCount;
+        killCountText.text = "KILL : " + gameData.killCount.ToString("0000");
+
+        //PlayerPrefs.SetInt("KILL_COUNT", killCount);
+    }
+
+    void SaveGameData()
+    {
+        dataManager.Save(gameData);
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveGameData();
+    }
+    #endregion
 }

@@ -27,6 +27,7 @@ public class Damage : MonoBehaviour {
    
     // Use this for initialization
     void Start () {
+        maxHP = GameManager.instance.gameData.hp;
         currentHP = maxHP;
         DisplayHPBar();
     }
@@ -86,7 +87,7 @@ public class Damage : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        
         elapsedTime = 0.0f;
         currentColor.a = 0.0f;
         bloodScreen.color = currentColor;

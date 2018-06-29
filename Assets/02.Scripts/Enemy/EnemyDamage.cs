@@ -22,7 +22,7 @@ public class EnemyDamage : MonoBehaviour {
     private Canvas uiCanvas;
 
     private Image hpBarImage;
-
+    
     // Use this for initialization
 	void Start () {
         // 혈흔 효과 프리팹을 리소스 폴더에서 로드
