@@ -106,4 +106,19 @@ public class Damage : MonoBehaviour {
         //}
     }
 
+    private void OnEnable()
+    {
+        GameManager.OnItemChange += UpdateSetup;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnItemChange -= UpdateSetup;
+    }
+    void UpdateSetup()
+    {
+        float changedValue = GameManager.instance.gameData.hp - maxHP;
+        maxHP += changedValue;
+        currentHP += changedValue;
+    }
 }

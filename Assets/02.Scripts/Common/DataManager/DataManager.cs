@@ -31,7 +31,7 @@ public class DataManager : MonoBehaviour {
         data.killCount      = gameData.killCount;
         data.speed          = gameData.speed;
         data.damage         = gameData.damage;
-        data.equipedItem    = gameData.equipedItem;
+        data.equipedItems    = gameData.equipedItems;
 
         bf.Serialize(file, data);
         file.Close();

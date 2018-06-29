@@ -10,13 +10,13 @@ namespace DataInfo
         public float hp = 120.0f;       //주인공의 초기 생명력
         public float damage = 25.0f;    //총알의 기본 데미지
         public float speed = 6.0f;      //주인공의 이동속도
-        public List<Item> equipedItem = new List<Item>();
+        public List<Item> equipedItems = new List<Item>();
     }
 
     [System.Serializable]
     public class Item
     {
-        public enum ItemType { HP, SPEED, GRENADE, DAMAGEUP }   // 아이템 종류
+        public enum ItemType { HP, SPEEDUP, GRENADE, DAMAGEUP }   // 아이템 종류
         public enum ItemCalc { INC_VALUE, PERCENT}              // 계산 방식 정의
         public ItemType itemType;                               // 아이템 종류 변수 선언
         public ItemCalc itemCalc;                               // 계산방식 종류 변수 선언

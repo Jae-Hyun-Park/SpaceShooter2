@@ -4745,6 +4745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23e32f815b36ee42a53f4c0fe1e16cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 10
   rotateSpeed: 100
   playerAnim:
     idle: {fileID: 7400000, guid: df787a42d52d64ff4b908f7a344d499e, type: 2}
@@ -6460,7 +6461,12 @@ MonoBehaviour:
     hp: 120
     damage: 25
     speed: 6
-    equipedItem: []
+    equipedItems: []
+  itemObjects:
+  - {fileID: 1575076711}
+  - {fileID: 560292352}
+  - {fileID: 1124096395}
+  - {fileID: 1944298465}
 --- !u!4 &1780532594
 Transform:
   m_ObjectHideFlags: 0

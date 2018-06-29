@@ -113,6 +113,10 @@ public class PlayerCtrl : MonoBehaviour {
 		}
 	}
 
+    void UpdateSetup()
+    {
+        moveSpeed = GameManager.instance.gameData.speed;
+    }
 	private void LateUpdate()
 	{
 		// 모든 Update 함수가 호출되고 나서 한번씩 호출
@@ -130,19 +134,22 @@ public class PlayerCtrl : MonoBehaviour {
 
 	private void OnEnable()
 	{
-		// 게임오브젝트 또는 스크립트가 활성화 되는 순간마다 실행
-		// 이벤트 연결 같은 로직에 활용하기 용이
-		// 코루틴 활용 불가
-	}
+        // 게임오브젝트 또는 스크립트가 활성화 되는 순간마다 실행
+        // 이벤트 연결 같은 로직에 활용하기 용이
+        // 코루틴 활용 불가
+
+        GameManager.OnItemChange += UpdateSetup;
+    }
 
 	private void OnDisable()
 	{
-		// 게임오브젝트 또는 스크립트가 비활성화 되는 순간마다 실행
-		// 이벤트 연결 종료 같은 로직에 활용하기 용이
-		// 코루틴 활용 불가
-	}
+        // 게임오브젝트 또는 스크립트가 비활성화 되는 순간마다 실행
+        // 이벤트 연결 종료 같은 로직에 활용하기 용이
+        // 코루틴 활용 불가
+        GameManager.OnItemChange -= UpdateSetup;
+    }
 
-	private void OnGUI()
+    private void OnGUI()
 	{
 		// 개발용 테스트 UI 함수
 	}

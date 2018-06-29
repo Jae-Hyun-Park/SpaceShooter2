@@ -24,6 +24,7 @@ public class BulletCtrl : MonoBehaviour {
     // Use this for initialization
     void OnEnable () {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+        UpdateSetup();
 	}
 
     private void OnDisable()
@@ -32,6 +33,11 @@ public class BulletCtrl : MonoBehaviour {
         tr.position = Vector3.zero;
         tr.rotation = Quaternion.identity;
         rb.Sleep();
+    }
+
+    void UpdateSetup()
+    {
+        damage = GameManager.instance.gameData.damage;
     }
     // Update is called once per frame
     void Update () {
