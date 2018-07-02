@@ -57,9 +57,9 @@ public class BarrelCtrl : MonoBehaviour {
     }
 
     // 충돌 발생시 한번 호출되는 콜백 함수
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if(collision.collider.CompareTag("BULLET"))
+        if(collider.CompareTag("BULLET"))
         {
             // 총알의 충돌 횟수 증가
             if(++hitCount == 3)

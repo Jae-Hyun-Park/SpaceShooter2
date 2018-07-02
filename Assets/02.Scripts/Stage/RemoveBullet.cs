@@ -10,27 +10,29 @@ public class RemoveBullet : MonoBehaviour {
     // 스파크 이펙트의가 이 오브젝트의 자식으로 붙일것인지 체크하는 변수
     public bool isSparkEffectRelative;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if(collision.collider.tag == "BULLET")
+        if(collider.tag == "BULLET")
         {
-            ShowEffect(collision);
+            ShowEffect(collider);
             //Destroy(collision.gameObject);
-            collision.gameObject.SetActive(false);
+            collider.gameObject.SetActive(false);
         }
     }
    
-    void ShowEffect(Collision coll)
+    void ShowEffect(Collider collider)
     {
         // 충돌 지점의 정보를 추출
-        ContactPoint contact = coll.contacts[0];
+        Vector3 pos = collider.transform.position;
+
+        Vector3 normal = collider.transform.forward;
 
         // 충돌지점의 법선 벡터가 이루는 회전각도를 추출
-        Quaternion rotation = Quaternion.FromToRotation(Vector3.back, contact.normal);
+        Quaternion rotation = Quaternion.FromToRotation(Vector3.back, normal);
 
         // 스파크 효과를 생성
         Instantiate(sparkEffect,
-            contact.point,
+            pos,
             rotation,
             isSparkEffectRelative ? transform : null);
     }

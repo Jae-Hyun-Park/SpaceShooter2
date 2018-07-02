@@ -56,19 +56,19 @@ public class EnemyDamage : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if(collision.collider.tag == bulletTag)
+        if(collider.tag == bulletTag)
         {
             // 혈흔 효과 출력
-            ShowBloodEffect(collision);
+            ShowBloodEffect(collider);
 
             // 총알 삭제
             //Destroy(collision.gameObject);
-            collision.gameObject.SetActive(false);
+            collider.gameObject.SetActive(false);
 
             // 생명력 차감
-            hp -= collision.gameObject.GetComponent<BulletCtrl>().damage;
+            hp -= collider.gameObject.GetComponent<BulletCtrl>().damage;
 
             hpBarImage.fillAmount = hp / maxHP;
 
@@ -83,13 +83,13 @@ public class EnemyDamage : MonoBehaviour {
         }
     }
 
-    void ShowBloodEffect(Collision collision)
+    void ShowBloodEffect(Collider collider)
     {
         // 총알이 충돌한 지점 계산
-        Vector3 pos = collision.contacts[0].point;
+        Vector3 pos = collider.transform.position;
 
         // 총알이 충돌했을때의 법선 벡터
-        Vector3 normal = collision.contacts[0].normal;
+        Vector3 normal = collider.transform.forward;
 
         // 총알 충돌시 방향 벡터에 따른 회전 정보 계산
         Quaternion rotation = Quaternion.FromToRotation(-Vector3.forward, normal);

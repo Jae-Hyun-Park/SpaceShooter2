@@ -32,16 +32,16 @@ public class Damage : MonoBehaviour {
         DisplayHPBar();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (other.tag == bulletTag)
+        if (collider.tag == bulletTag)
         {
             if (bloodCoroutine != null)
                 StopCoroutine(bloodCoroutine);
 
             bloodCoroutine = StartCoroutine(ShowBloodScreen(0.5f));
 
-            Destroy(other.gameObject);
+            Destroy(collider.gameObject);
 
             currentHP -= 5.0f;
             Debug.Log("Player HP : " + currentHP);
@@ -95,7 +95,7 @@ public class Damage : MonoBehaviour {
 
     void PlayerDie()
     {
-        Debug.Log("Player has Dead..");
+
         GameManager.instance.isGameOver = true;
         onPlayerDie();
         //GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);

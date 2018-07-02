@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour {
     #region GameData
     public Text killCountText;
     private DataManager dataManager;
-    public GameData gameData;
+    //public GameData gameData;
+    public GameDataObject gameData;
     #endregion
 
     // 인벤토리의 아이템이 변경됐을때 발생 시킬 이벤트 정의
@@ -166,13 +167,13 @@ public class GameManager : MonoBehaviour {
     #region 게임 데이터 저장 및 로드
     void LoadGameData()
     {
-        GameData data = dataManager.Load();
+        //GameData data = dataManager.Load();
 
-        gameData.killCount = data.killCount;
-        gameData.hp = data.hp;
-        gameData.speed = data.speed;
-        gameData.damage = data.damage;
-        gameData.equipedItems = data.equipedItems;
+        //gameData.killCount = data.killCount;
+        //gameData.hp = data.hp;
+        //gameData.speed = data.speed;
+        //gameData.damage = data.damage;
+        //gameData.equipedItems = data.equipedItems;
 
         // 보유한 아이템이 있다면 인벤토리 셋팅
         if (gameData.equipedItems.Count > 0)
@@ -193,7 +194,8 @@ public class GameManager : MonoBehaviour {
 
     void SaveGameData()
     {
-        dataManager.Save(gameData);
+        //dataManager.Save(gameData);
+        UnityEditor.EditorUtility.SetDirty(gameData);
     }
 
     // 로드한 데이터를 기준으로 인벤토리에 아이템을 추가
@@ -260,6 +262,8 @@ public class GameManager : MonoBehaviour {
             case Item.ItemType.GRENADE:
                 break;
         }
+        UnityEditor.EditorUtility.SetDirty(gameData);
+
         if (OnItemChange != null) OnItemChange();
     }
 
@@ -292,6 +296,8 @@ public class GameManager : MonoBehaviour {
             case Item.ItemType.GRENADE:
                 break;
         }
+        UnityEditor.EditorUtility.SetDirty(gameData);
+
         if (OnItemChange != null) OnItemChange();
     }
 }

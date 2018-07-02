@@ -129,7 +129,7 @@ public class FireCtrl : MonoBehaviour {
 		// 현재 들고있는 무기 타입에 맞게 오디오 클립을 가져옴
 		var _SFX = playerSFX.fireClips[(int)currentWeapon];
 		audioSource.pitch = 1.0f + Random.Range(-0.2f, 0.2f);
-		audioSource.PlayOneShot(audioSource.clip, 1.0f);
+		audioSource.PlayOneShot(_SFX, 1.0f);
 	}
 
     public void OnChangeWeapon()
