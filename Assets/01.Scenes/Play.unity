@@ -237,6 +237,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -432,6 +436,10 @@ Prefab:
     - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
       propertyPath: m_Name
       value: crate_toltech_tools (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
@@ -1022,6 +1030,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_big (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -1080,6 +1092,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -1140,6 +1156,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -1193,6 +1213,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -1252,6 +1276,10 @@ Prefab:
     - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
       propertyPath: m_Name
       value: crate_toltech_big (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
@@ -1335,6 +1363,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -1396,6 +1428,10 @@ Prefab:
     - target: {fileID: 4158680814209130, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
@@ -1498,6 +1534,10 @@ Prefab:
     - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
       propertyPath: m_Name
       value: crate_toltech_big (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
@@ -1789,6 +1829,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -1851,6 +1895,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -1904,6 +1952,10 @@ Prefab:
     - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
       propertyPath: m_Name
       value: crate_toltech_tools (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
@@ -2037,6 +2089,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66df7925b13f62048837158172756858, type: 2}
   m_IsPrefabParent: 0
@@ -2133,6 +2189,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -2365,6 +2425,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
   m_IsPrefabParent: 0
@@ -2527,6 +2591,10 @@ Prefab:
     - target: {fileID: 4158680814209130, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
@@ -2818,6 +2886,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_big (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -3106,6 +3178,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -3159,6 +3235,10 @@ Prefab:
     - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
       propertyPath: m_Name
       value: crate_toltech_tools (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
@@ -3292,6 +3372,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -3346,6 +3430,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_tools (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
   m_IsPrefabParent: 0
@@ -3399,6 +3487,10 @@ Prefab:
     - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
       propertyPath: m_Name
       value: crate_toltech_big (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
@@ -3571,6 +3663,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66df7925b13f62048837158172756858, type: 2}
   m_IsPrefabParent: 0
@@ -3728,6 +3824,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_tools (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
   m_IsPrefabParent: 0
@@ -3800,6 +3900,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -3864,6 +3968,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -3917,6 +4025,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -4321,6 +4433,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_big (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -4411,6 +4527,10 @@ Prefab:
     - target: {fileID: 4045941300045868, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
@@ -4925,6 +5045,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -5057,6 +5181,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -5110,6 +5238,10 @@ Prefab:
     - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
       propertyPath: m_Name
       value: crate_toltech_tools (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
@@ -5615,6 +5747,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_big (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -5661,10 +5797,6 @@ Prefab:
     - target: {fileID: 4829958864896588, guid: 66df7925b13f62048837158172756858, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66df7925b13f62048837158172756858, type: 2}
@@ -5823,6 +5955,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -6162,6 +6298,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -6215,6 +6355,10 @@ Prefab:
     - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
       propertyPath: m_Name
       value: crate_toltech_big (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
@@ -6399,6 +6543,26 @@ MonoBehaviour:
   type: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _radius: 0.8
+--- !u!1 &1275375137 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858,
+    type: 2}
+  m_PrefabInternal: {fileID: 1689244265}
+--- !u!54 &1275375142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275375137}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1278092862
 Prefab:
   m_ObjectHideFlags: 0
@@ -6449,6 +6613,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -6627,7 +6795,7 @@ GameObject:
   - component: {fileID: 1328936696}
   - component: {fileID: 1328936695}
   - component: {fileID: 1328936694}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6834,6 +7002,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -6893,6 +7065,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -6946,6 +7122,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -7589,6 +7769,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -7860,6 +8044,10 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_big (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -7929,9 +8117,33 @@ Prefab:
       propertyPath: m_Name
       value: crate_toltech_small (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1611056753 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858,
+    type: 2}
+  m_PrefabInternal: {fileID: 453902879}
+--- !u!54 &1611056758
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1611056753}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1616383447
 Prefab:
   m_ObjectHideFlags: 0
@@ -8282,6 +8494,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
   m_IsPrefabParent: 0
@@ -8539,6 +8755,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
@@ -8588,6 +8808,10 @@ Prefab:
     - target: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66df7925b13f62048837158172756858, type: 2}
@@ -8893,7 +9117,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1731397855}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: StaticObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9826,6 +10050,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
   m_IsPrefabParent: 0
@@ -9932,6 +10160,10 @@ Prefab:
     - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
       propertyPath: m_Name
       value: crate_toltech_small (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138379501160390, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cba7f8392f17764bb7d995e3483fa28, type: 2}
@@ -10417,6 +10649,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1528439923585840, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76a18ba30af2d4f9ead36968ca7d49, type: 2}
   m_IsPrefabParent: 0
@@ -10789,9 +11025,33 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1941807675065966, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b23e8fdb1a4614d8e62f7e19914a29, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2041858291 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1710171563224058, guid: 66df7925b13f62048837158172756858,
+    type: 2}
+  m_PrefabInternal: {fileID: 710443523}
+--- !u!54 &2041858296
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041858291}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &2044461498 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4158680814209130, guid: 28b23e8fdb1a4614d8e62f7e19914a29,

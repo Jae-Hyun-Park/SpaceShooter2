@@ -20,10 +20,10 @@ public class EnemyAI : MonoBehaviour {
     public Transform playerTransform;
 
     // 추적 사정거리
-    public float traceDistance = 10.0f;
+    public float traceDistance = 20.0f;
 
     // 공격 사정거리
-    public float attackDistance = 5.0f;
+    public float attackDistance = 10.0f;
 
     // AI 상태 체크 주기
     public float refreshAICycle = 0.3f;
@@ -42,6 +42,7 @@ public class EnemyAI : MonoBehaviour {
 
     private EnemyFire enemyFire;
 
+    private EnemyFOV enemyFOV;
     // 애니메이터 컨트롤러에 정의한 파라미터의 해시값을 미리 추출
     private readonly int hashMove = Animator.StringToHash("IsMove");
     private readonly int hashSpeed = Animator.StringToHash("Speed");
@@ -62,6 +63,7 @@ public class EnemyAI : MonoBehaviour {
         moveAgent = GetComponent<MoveAgent>();
         animator = GetComponent<Animator>();
         enemyFire = GetComponent<EnemyFire>();
+        enemyFOV = GetComponent<EnemyFOV>();
 
         waitSecond = new WaitForSeconds(refreshAICycle);
     }
@@ -101,9 +103,14 @@ public class EnemyAI : MonoBehaviour {
 
             if (dist <= attackDistance * attackDistance)
             {
-                state = EnemyState.ATTACK;
+                Vector3 startPosition = new Vector3(
+                       transform.position.x,
+                       transform.position.y + enemyFire.firePos.position.y,
+                       transform.position.z);
+                if (enemyFOV.IsViewPlayer())
+                    state = EnemyState.ATTACK;
             }
-            else if (dist <= traceDistance * traceDistance)
+            else if (enemyFOV.IsTracePlayer())
             {
                 state = EnemyState.TRACE;
             }
